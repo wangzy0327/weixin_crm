@@ -1,0 +1,62 @@
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee
+                      http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+         version="3.1"
+         metadata-complete="true">
+
+  <!--
+    InitServlet 在web.xml中的配置与普通Servlet的配置有几点区别：
+
+    1）通过配置<init-param>向Servlet中传入参数；
+
+    2）通 过配置<load-on-startup>使得Web服务器启动时就加载该Servlet；
+
+    3）没有配置<servlet- mapping>，因为InitServlet并不对外提供访问。
+-->
+  <context-param>
+    <param-name>contextConfigLocation</param-name>
+    <param-value>classpath:spring/*.xml</param-value>
+  </context-param>
+  <servlet>
+    <servlet-name>initServlet</servlet-name>
+    <servlet-class>
+      com.weixin.web.InitServlet
+    </servlet-class>
+
+    <!-- 配置获取access_token所需参数appid和appsecret -->
+    <init-param>
+      <param-name>contextConfigLocation</param-name>
+      <param-value>classpath:spring/*.xml</param-value>
+    </init-param>
+    <init-param>
+      <param-name>appid</param-name>
+      <param-value>wx280016301ed1f819</param-value>
+    </init-param>
+    <init-param>
+      <param-name>appsecret</param-name>
+      <param-value>ea98a31c29e3495b44e91e0eab8c08a1</param-value>
+    </init-param>
+    <load-on-startup>2</load-on-startup>
+  </servlet>
+        <!--修改servlet版本为3.1-->
+        <!--配置DispatcherServlet-->
+  <servlet>
+    <servlet-name>crm-dispatcher</servlet-name>
+    <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+    <!--配置springMVC 需要加载的配置文件
+        spirng-dao.xml spring-service.xml spring-web.xml
+        MyBatis -> Spring ->Spring MVC
+    -->
+    <init-param>
+      <param-name>contextConfigLocation</param-name>
+      <param-value>classpath:spring/*.xml</param-value>
+    </init-param>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>crm-dispatcher</servlet-name>
+    <!-- 默认匹配所有的请求 -->
+    <url-pattern>/</url-pattern>
+  </servlet-mapping>
+
+</web-app>
