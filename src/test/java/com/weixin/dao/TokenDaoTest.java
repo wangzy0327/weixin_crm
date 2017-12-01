@@ -1,7 +1,7 @@
 package com.weixin.dao;
 
 import com.weixin.entity.POJO.Token;
-import com.weixin.util.CommonUtil;
+import com.weixin.util.WeixinUtil;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,7 +25,7 @@ public class TokenDaoTest {
 
     @Test
     public void saveToken() throws Exception {
-        Token token = CommonUtil.getToken("wx280016301ed1f819", "ea98a31c29e3495b44e91e0eab8c08a1");
+        Token token = WeixinUtil.getAccessToken("wx280016301ed1f819", "ea98a31c29e3495b44e91e0eab8c08a1");
         System.out.println(token);
         tokenDao.saveToken(token.getAccessToken(),token.getExpiresIn(),new Date());
     }

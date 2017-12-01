@@ -76,7 +76,7 @@ public class MenuManager {
         btn22.setKey("22");
 
         CommonButton btn23 = new CommonButton();
-        btn23.setName("美女电台");
+        btn23.setName("有声电台");
         btn23.setType("click");
         btn23.setKey("23");
 

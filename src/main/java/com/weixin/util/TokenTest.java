@@ -6,7 +6,7 @@ public class TokenTest {
     public static void main(String[] args) throws Exception {
         String appId = "wx280016301ed1f819";
         String appSecret = "ea98a31c29e3495b44e91e0eab8c08a1";
-        Token token = CommonUtil.getToken(appId,appSecret);
+        Token token = WeixinUtil.getAccessToken(appId,appSecret);
         System.out.println(token);
 
 //        //修改appID，secret
