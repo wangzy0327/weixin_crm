@@ -1,11 +1,10 @@
 package com.weixin.util;
 
-import com.weixin.entity.Token;
+import com.weixin.entity.POJO.Token;
 import org.json.JSONException;
 import org.json.JSONObject;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.net.ssl.HttpsURLConnection;
 import javax.net.ssl.SSLContext;

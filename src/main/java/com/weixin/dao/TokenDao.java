@@ -1,6 +1,6 @@
 package com.weixin.dao;
 
-import com.weixin.entity.Token;
+import com.weixin.entity.POJO.Token;
 import org.apache.ibatis.annotations.Param;
 
 import javax.annotation.Resource;

@@ -1,23 +1,15 @@
 package com.weixin.web;
 
-import com.weixin.dao.TokenDao;
-import com.weixin.entity.Token;
+import com.weixin.entity.POJO.Token;
 import com.weixin.service.TokenService;
 import com.weixin.thread.TokenThread;
 import com.weixin.util.CommonUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
-import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.context.WebApplicationContext;
-import org.springframework.web.context.support.SpringBeanAutowiringSupport;
-import org.springframework.web.context.support.WebApplicationContextUtils;
 
-import javax.servlet.ServletConfig;
-import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 @Controller

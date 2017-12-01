@@ -1,7 +1,6 @@
 package com.weixin.service;
 
-import com.weixin.entity.Token;
-import org.apache.ibatis.annotations.Param;
+import com.weixin.entity.POJO.Token;
 
 import java.util.Date;
 

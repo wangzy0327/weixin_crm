@@ -1,18 +1,13 @@
 package com.weixin.thread;
 
-import com.weixin.dao.TokenDao;
-import com.weixin.entity.Token;
+import com.weixin.entity.POJO.Token;
 import com.weixin.service.TokenService;
 import com.weixin.util.CommonUtil;
-import com.weixin.util.SpringContextUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
 import org.springframework.stereotype.Component;
-import org.springframework.test.context.ContextConfiguration;
 
-import javax.annotation.Resource;
 import java.util.Date;
 
 @Component
