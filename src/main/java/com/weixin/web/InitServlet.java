@@ -3,7 +3,7 @@ package com.weixin.web;
 import com.weixin.entity.POJO.Token;
 import com.weixin.service.TokenService;
 import com.weixin.thread.TokenThread;
-import com.weixin.util.CommonUtil;
+import com.weixin.util.WeixinUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.context.ApplicationContext;
@@ -21,7 +21,7 @@ public class InitServlet extends HttpServlet {
             再启动 线程TokenThread定时获取access_token
      */
     private static final long serialVersionUID = 1L;
-    private static Logger log = LoggerFactory.getLogger(CommonUtil.class);
+    private static Logger log = LoggerFactory.getLogger(WeixinUtil.class);
 
     public void init() throws ServletException {
         ApplicationContext app = new ClassPathXmlApplicationContext("classpath:/spring/spring-dao.xml");

@@ -9,7 +9,6 @@ import java.util.Locale;
 public class SpringContextUtil implements ApplicationContextAware {
 
     private static ApplicationContext context = null;
-
     /* (non Javadoc)
      * @Title: setApplicationContext
      * @Description: spring获取bean工具类

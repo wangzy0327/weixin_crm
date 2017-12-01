@@ -2,7 +2,7 @@ package com.weixin.thread;
 
 import com.weixin.entity.POJO.Token;
 import com.weixin.service.TokenService;
-import com.weixin.util.CommonUtil;
+import com.weixin.util.WeixinUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.context.ApplicationContext;
@@ -30,7 +30,7 @@ public class TokenThread implements Runnable {
     public void run() {
         while (true) {
             try {
-                accessToken = CommonUtil.getToken(appid, appsecret);
+                accessToken = WeixinUtil.getAccessToken(appid, appsecret);
                 if (null != accessToken) {
                     //调用存储到数据库
                     tokenService.saveToken(accessToken.getAccessToken(),accessToken.getExpiresIn(),new Date());
