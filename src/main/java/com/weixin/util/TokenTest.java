@@ -1,15 +1,6 @@
 package com.weixin.util;
 
-import com.weixin.entity.Token;
-
-import javax.net.ssl.HttpsURLConnection;
-import javax.net.ssl.SSLContext;
-import javax.net.ssl.SSLSocketFactory;
-import javax.net.ssl.TrustManager;
-import java.io.BufferedReader;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.net.URL;
+import com.weixin.entity.POJO.Token;
 
 public class TokenTest {
     public static void main(String[] args) throws Exception {

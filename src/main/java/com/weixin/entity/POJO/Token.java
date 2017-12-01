@@ -1,4 +1,4 @@
-package com.weixin.entity;
+package com.weixin.entity.POJO;
 
 public class Token {
     // 接口访问凭证

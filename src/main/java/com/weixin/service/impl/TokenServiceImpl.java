@@ -1,9 +1,8 @@
 package com.weixin.service.impl;
 
 import com.weixin.dao.TokenDao;
-import com.weixin.entity.Token;
+import com.weixin.entity.POJO.Token;
 import com.weixin.service.TokenService;
-import org.apache.ibatis.annotations.Param;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
